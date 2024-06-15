@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login In</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      main {
+        width: 100vw;
+      }
+      form {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      .google-btn {
+        width: 440px;
+        border: 1px solid black;
+        margin-left: 36vw;
+        background-color: #dd4b39;
+        color: #fff;
+        border-radius: 4px;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .google-btn:hover {
+        background-color: #d14836;
+      }
+      .login-link {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .login-link a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      .login-link a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form action="#" method="post">
+        <h2>Login In</h2>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          id="email"
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+          id="password"
+        />
+        <label for="rememberMe">
+          <input type="checkbox" id="rememberMe" name="rememberMe" /> Remember
+          me
+        </label>
+        <input type="submit" value="Login In" />
+        <a href="forgot_password.html" class="forgot-password-link"
+          >Forgot Password?</a
+        >
+      </form>
+      <button class="google-btn" id="login-with-google">
+        Login In with Google
+      </button>
+      <div class="login-link">
+        <p>Not a registered user? <a href="signup.html">Sign up</a></p>
+      </div>
+    </main>
+  </body>
+  <script src="../scripts/login.js"></script>
+</html>

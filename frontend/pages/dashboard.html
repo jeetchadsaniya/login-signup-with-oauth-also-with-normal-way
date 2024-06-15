@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <h1>Dashboard</h1>
+  </body>
+  <script>
+    async function checkUser() {
+      try {
+        let data = await fetch("http://127.0.0.1:5000/api/v1/user/dashboard", {
+          method: "GET",
+          credentials: "include",
+        });
+
+        data = await data.json();
+
+        if (data.statusCode != 200) {
+          throw new Error(data.message);
+        }
+      } catch (error) {
+        alert(error.message);
+        window.location.href = "../pages/login.html";
+        return;
+      }
+    }
+    window.addEventListener("load", checkUser);
+  </script>
+</html>
